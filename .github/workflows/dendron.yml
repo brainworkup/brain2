@@ -33,26 +33,3 @@ jobs:
           publish_branch: pages
           publish_dir: docs/
           force_orphan: true
-package.json
-{
-  "name": "@brainworkup/brain2",
-  "description": "brainworkup's second brain ",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dendron-cli": "dendron-cli"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brainworkup/brain2.git"
-  },
-  "author": "Joey Trampush <j.trampush@gmail.com>",
-  "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/brainworkup/brain2/issues"
-  },
-  "homepage": "https://github.com/brainworkup/brain2#readme",
-  "devDependencies": {
-    "@dendronhq/dendron-cli": "^0.12.3-alpha.16"
-  }
-}
