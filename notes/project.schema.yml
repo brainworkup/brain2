@@ -1,0 +1,25 @@
+version: 1
+imports: []
+schemas:
+  - id: project
+    title: project
+    desc: "Project schema"
+    parent: root
+    pattern: p.*
+    namespace: true
+    template:
+      id: templates.project
+      type: note
+    # children:
+    #   - grant
+
+  # - id: grant
+  #   desc: grants related to project
+  #   namespace: true
+  #   template:
+  #     id: templates.grant
+  #     type: note
+  #   children:
+  #     - aims
+
+  # - id: aims
