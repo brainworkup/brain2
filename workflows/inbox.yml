@@ -1,0 +1,22 @@
+name: Manually triggered workflow
+on:
+  workflow_dispatch:
+    inputs:
+      data:
+        description: "WM information to put in the knowledge base."
+        required: true
+
+jobs:
+  store_data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: anglinb/foam-capture-action@main
+        with:
+          capture: ${{ github.event.inputs.data }}
+
+      - run: |
+          git config --local user.email "j.trampush@gmail.com"
+          git config --local user.name "brainworkup"
+          git commit -m "Captured from WM workflow trigger" -a
+          git push -u origin main

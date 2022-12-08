@@ -1,0 +1,118 @@
+version: 5
+dev:
+    enablePreviewV2: true
+    enableSelfContainedVaults: true
+    enableLinkCandidates: true
+    enableExportPodV2: true
+    enableExperimentalIFrameNoteRef: true
+    enableEngineV3: true
+commands:
+    lookup:
+        note:
+            selectionMode: link
+            confirmVaultOnCreate: true
+            vaultSelectionModeOnCreate: smart
+            leaveTrace: true
+            bubbleUpCreateNew: true
+            fuzzThreshold: 0.2
+    randomNote:
+        include: []
+    insertNoteLink:
+        aliasMode: none
+        enableMultiSelect: true
+    insertNoteIndex:
+        enableMarker: true
+    copyNoteLink:
+        aliasMode: title
+    templateHierarchy: template
+workspace:
+    vaults:
+        -
+            fsPath: .
+            selfContained: true
+            name: brain2
+    journal:
+        dailyDomain: daily
+        name: journal
+        dateFormat: y.MM.dd
+        addBehavior: asOwnDomain
+        dailyVault: mem
+    scratch:
+        name: scratch
+        dateFormat: y.MM.dd.HHmmss
+        addBehavior: asOwnDomain
+    task:
+        name: task
+        dateFormat: y.MM.dd
+        addBehavior: asOwnDomain
+        statusSymbols:
+            '': ' '
+            wip: w
+            done: x
+            assigned: a
+            moved: m
+            blocked: b
+            delegated: l
+            dropped: d
+            pending: 'y'
+        taskCompleteStatus:
+            - done
+            - x
+        prioritySymbols:
+            H: high
+            M: medium
+            L: low
+        todoIntegration: true
+        createTaskSelectionType: selection2link
+    graph:
+        zoomSpeed: 1
+        createStub: false
+    enableAutoCreateOnDefinition: true
+    enableXVaultWikiLink: true
+    enableRemoteVaultInit: true
+    enableUserTags: true
+    enableHashTags: true
+    workspaceVaultSyncMode: noCommit
+    enableAutoFoldFrontmatter: true
+    enableEditorDecorations: true
+    maxPreviewsCached: 10
+    maxNoteLength: 204800
+    enableFullHierarchyNoteTitle: false
+preview:
+    enableFMTitle: true
+    enableNoteTitleForLink: true
+    enableFrontmatterTags: true
+    enableHashesForFMTags: false
+    enablePrettyRefs: true
+    enableKatex: true
+    automaticallyShowPreview: false
+    theme: light
+publishing:
+    enableFMTitle: true
+    enableNoteTitleForLink: true
+    enablePrettyRefs: true
+    enableKatex: true
+    copyAssets: true
+    siteHierarchies:
+        - root
+    writeStubs: false
+    siteRootDir: docs
+    seo:
+        title: Dendron
+        description: Personal Knowledge Space
+        author: Joey Trampush
+    github:
+        enableEditLink: true
+        editLinkText: Edit this page on GitHub
+        editBranch: main
+        editViewMode: tree
+    enableSiteLastModified: true
+    enableFrontmatterTags: true
+    enableHashesForFMTags: false
+    enableRandomlyColoredTags: true
+    enableTaskNotes: true
+    enablePrettyLinks: true
+    searchMode: search
+    enableHierarchyDisplay: true
+    hierarchyDisplayTitle: Children
+    enableBackLinks: true
