@@ -27,9 +27,12 @@ commands:
     templateHierarchy: template
 workspace:
     vaults:
-        - fsPath: .
+        - fsPath: docs/notes
           selfContained: true
           name: brain2
+          remote:
+              type: git
+              url: git@github.com:brainworkup/brain2.git
     journal:
         dailyDomain: daily
         name: journal
