@@ -27,13 +27,12 @@ commands:
     templateHierarchy: template
 workspace:
     vaults:
-        -
-            fsPath: .
-            selfContained: true
-            name: brain2
-            remote:
-                type: git
-                url: git@github.com:brainworkup/brain2.git
+        - fsPath: .
+          selfContained: true
+          name: brain2
+          remote:
+              type: git
+              url: git@github.com:brainworkup/brain2.git
     journal:
         dailyDomain: daily
         name: journal
@@ -48,7 +47,7 @@ workspace:
         dateFormat: y.MM.dd
         addBehavior: asOwnDomain
         statusSymbols:
-            '': ' '
+            "": " "
             wip: w
             done: x
             assigned: a
@@ -56,7 +55,7 @@ workspace:
             blocked: b
             delegated: l
             dropped: d
-            pending: 'y'
+            pending: "y"
         taskCompleteStatus:
             - done
             - x
@@ -98,7 +97,7 @@ publishing:
     siteHierarchies:
         - root
     writeStubs: false
-    siteRootDir: notes
+    siteRootDir: docs
     seo:
         title: Brain2
         description: Personal Knowledge Space
