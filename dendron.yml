@@ -27,16 +27,14 @@ commands:
     templateHierarchy: template
 workspace:
     vaults:
-        -
-            fsPath: .
-            selfContained: true
-            name: brain2
+        - fsPath: .
+          selfContained: true
+          name: brain2
     journal:
         dailyDomain: daily
         name: journal
         dateFormat: y.MM.dd
         addBehavior: asOwnDomain
-        dailyVault: mem
     scratch:
         name: scratch
         dateFormat: y.MM.dd.HHmmss
@@ -46,7 +44,7 @@ workspace:
         dateFormat: y.MM.dd
         addBehavior: asOwnDomain
         statusSymbols:
-            '': ' '
+            "": " "
             wip: w
             done: x
             assigned: a
@@ -54,7 +52,7 @@ workspace:
             blocked: b
             delegated: l
             dropped: d
-            pending: 'y'
+            pending: "y"
         taskCompleteStatus:
             - done
             - x
@@ -72,7 +70,7 @@ workspace:
     enableRemoteVaultInit: true
     enableUserTags: true
     enableHashTags: true
-    workspaceVaultSyncMode: noCommit
+    workspaceVaultSyncMode: sync
     enableAutoFoldFrontmatter: true
     enableEditorDecorations: true
     maxPreviewsCached: 10
@@ -98,7 +96,7 @@ publishing:
     writeStubs: false
     siteRootDir: docs
     seo:
-        title: Dendron
+        title: Brain#2
         description: Personal Knowledge Space
         author: Joey Trampush
     github:

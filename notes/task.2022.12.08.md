@@ -1,6 +1,6 @@
 ---
-id: 9ldwi9f0h41x6y2ec3w9zlu
-title: 08
+id: vt0etq88jzf4czmppicn7t2
+title: '8'
 desc: ''
 updated: 1670518518938
 created: 1670518518938
@@ -8,7 +8,7 @@ status: ''
 due: ''
 priority: ''
 owner: ''
-TODO: 08
+TODO: 8
 ---
 
 ## Task note first time
