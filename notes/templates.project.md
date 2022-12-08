@@ -10,6 +10,8 @@ _Edit the [[templates.project]] note to change this template._
 
 ## Dashboard
 
+## Grants
+
 TODO:
 
 <!-- Meeting attendees. If you prefix users with an '@', you can then optionally click Ctrl+Enter to create a note for that user. -->
