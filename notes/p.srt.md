@@ -14,7 +14,8 @@ TODO:
 
 <!-- Meeting attendees. If you prefix users with an '@', you can then optionally click Ctrl+Enter to create a note for that user. -->
 
-- @john-doe
+-
+  - @brainworkup
 
 ## Goals
 
