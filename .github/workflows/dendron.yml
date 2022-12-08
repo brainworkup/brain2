@@ -1,0 +1,58 @@
+# 1. Place this file in .github/workflows/dendron.yml
+# 2. Place package.json in the root of your repo
+# 3. Enable GH pages for the "pages" branch, from the root directory (not /docs)
+
+# On a push to master, we'll build your pod and push the
+# ./docs directory on master to the root of your pages branch.
+# GH pages will do the rest.
+
+name: Dendron
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v2
+
+      - name: Install npm dependencies
+        run: npm install
+
+      - name: Build pod
+        run: npm run dendron-cli -- buildSite --wsRoot ./ --vault notes/
+
+      - name: Deploy site
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: pages
+          publish_dir: docs/
+          force_orphan: true
+package.json
+{
+  "name": "@brainworkup/brain2",
+  "description": "brainworkup's second brain ",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dendron-cli": "dendron-cli"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brainworkup/brain2.git"
+  },
+  "author": "Joey Trampush <j.trampush@gmail.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/brainworkup/brain2/issues"
+  },
+  "homepage": "https://github.com/brainworkup/brain2#readme",
+  "devDependencies": {
+    "@dendronhq/dendron-cli": "^0.12.3-alpha.16"
+  }
+}
