@@ -1,0 +1,21 @@
+version: 1
+imports: []
+schemas:
+  - id: project
+    title: project
+    parent: root
+    pattern: p
+    children:
+      - pattern: "[0-9][0-9][0-9][0-9]"
+        children:
+          - pattern: "[0-9][0-9]"
+            children:
+              - pattern: "[0-9][0-9]"
+                template:
+                  id: templates.project
+                  type: note
+                children:
+                  - pattern: "*"
+                    template:
+                      id: templates.project
+                      type: note
