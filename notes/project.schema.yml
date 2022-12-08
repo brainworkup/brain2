@@ -5,7 +5,7 @@ schemas:
     title: project
     desc: "Project schema"
     parent: root
-    pattern: p
+    pattern: p.*
     namespace: true
     template:
       id: templates.project
