@@ -94,9 +94,9 @@ publishing:
     siteHierarchies:
         - root
     writeStubs: false
-    siteRootDir: docs
+    siteRootDir: notes
     seo:
-        title: Brain#2
+        title: Brain2
         description: Personal Knowledge Space
         author: Joey Trampush
     github:
